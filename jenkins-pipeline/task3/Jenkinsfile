@@ -22,9 +22,9 @@ pipeline {
                 sh '''#!/usr/bin/env bash
                 cd app_code
 		whoami
-                sudo docker login -u cuongnt260601 -p Cuong260601a@
-                sudo docker build --tag "cuongnt260601/nodejs-demo:${BUILD_NUMBER}" .
-                sudo docker push "cuongnt260601/nodejs-demo:${BUILD_NUMBER}"
+                docker login -u cuongnt260601 -p Cuong260601a@
+                docker build --tag "cuongnt260601/nodejs-demo:${BUILD_NUMBER}" .
+                docker push "cuongnt260601/nodejs-demo:${BUILD_NUMBER}"
                 '''
             }
         }
