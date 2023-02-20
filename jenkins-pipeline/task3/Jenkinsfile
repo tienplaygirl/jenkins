@@ -15,6 +15,9 @@ pipeline {
             }
         }
         stage('docker-build/push-registry') {
+	    echo ${DOCKER_REGISTRY_USERNAME}
+	    echo ${REGISTRY_NAME}
+	    echo ${DOCKER_REGISTRY_PASSWORD}
             steps {
                 sh '''#!/usr/bin/env bash
                 cd app_code
