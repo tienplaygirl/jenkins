@@ -15,9 +15,9 @@ pipeline {
             }
         }
         stage('docker-build/push-registry') {
-	    echo ${DOCKER_REGISTRY_USERNAME}
-	    echo ${REGISTRY_NAME}
-	    echo ${DOCKER_REGISTRY_PASSWORD}
+	    echo "Docker registry username is ${DOCKER_REGISTRY_USERNAME}"
+	    echo "Docker registry password is ${DOCKER_REGISTRY_PASSWORD}"
+	    echo "Registry name is ${REGISTRY_NAME}"
             steps {
                 sh '''#!/usr/bin/env bash
                 cd app_code
