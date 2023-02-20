@@ -22,9 +22,9 @@ pipeline {
                 sh '''#!/usr/bin/env bash
                 cd app_code
 		whoami
-                docker login -u ${DOCKER_REGISTRY_USERNAME} -p ${DOCKER_REGISTRY_PASSWORD}
-                docker build --tag "${REGISTRY_NAME}/nodejs-demo:${BUILD_NUMBER}" .
-                docker push "${REGISTRY_NAME}/nodejs-demo:${BUILD_NUMBER}"
+                docker login -u cuongnt260601 -p Cuong260601a@
+                docker build --tag "cuongnt260601/nodejs-demo:${BUILD_NUMBER}" .
+                docker push "cuongnt260601/nodejs-demo:${BUILD_NUMBER}"
                 '''
             }
         }
